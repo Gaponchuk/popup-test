@@ -1,0 +1,83 @@
+.btn {
+    font-size: 16px;
+    margin-bottom: 25px;
+    width: 70%;
+    padding: 13px 0;
+    color: $main-color;
+    background-color: transparent;
+    border: 1px solid #237BEF;
+    border-radius: 20px;
+    box-sizing: border-box;
+    cursor: pointer;
+  
+    &:hover {
+        background-color: $btn-bg-hover;
+      }
+    }
+  
+    .btn-close {
+      position: absolute;
+      top: 2px;
+      right: -22px;
+      width: 15px;
+      height: 15px;
+      border: none;
+      transform: translateX(50%);
+      cursor: pointer;
+      outline: none;
+      background-color: transparent;
+
+      &:hover {
+        &::before,
+        &::after {
+          background-color: $main-color;
+        }
+      }
+  
+      &:focus {
+        box-shadow: 0 0 5px 2px #68A6F1;
+      }
+  
+      @media screen and (max-width: 480px) {
+        top: -30px;
+        right: 0;
+        transform: translateX(0);
+      }
+  
+      &::before,
+      &::after {
+        @extend %pseudo-elements;
+
+        width: 20px;
+        height: 2px;
+        background-color: #fff;
+        top: 50%;
+        left: 50%;
+      }
+  
+      &::before {
+        transform: translate(-50%, -50%) rotate(-45deg);
+      }
+  
+      &::after {
+        transform: translate(-50%, -50%) rotate(45deg);
+      }
+    }
+  
+    .open-popup {
+      display: block;
+      font-size: 16px;
+      margin: 0 auto;
+      padding: 13px 45px;
+      color:$main-color;
+      background-color: transparent;
+      border: 1px solid $btn-border-color;
+      border-radius: 20px;
+      box-sizing: border-box;
+      cursor: pointer;
+      transform: translateY(45vh);
+  
+      &:hover {
+        background-color: $btn-bg-hover;
+      }
+    }

@@ -1,0 +1,61 @@
+.wrapper-input {
+	width: 100%;
+	margin-bottom: 20px;
+	position: relative;
+
+	&::before,
+	&::after {
+    @extend %pseudo-elements;
+    
+		width: 3px;
+		height: 1px;
+		bottom: 0;
+		background-color: $input-border-color;
+		z-index: 5;
+	}
+
+	&::before {
+		left: -2px;
+	}
+
+	&::after {
+		right: -2px;
+	}
+}
+
+.input-area {
+	font-size: 14px;
+	position: relative;
+	max-width: 405px;
+	width: 100%;
+	padding: 15px 11px;
+	border: 1px solid $input-border-color;
+	border-radius: 3px 3px 0 0;
+	box-sizing: border-box;
+	background-repeat: no-repeat;
+	background-position: 97% center;
+	
+	&::placeholder {
+		font-family: Roboto;
+		font-style: normal;
+		font-weight: normal;
+		font-size: 14px;
+		line-height: normal;
+		font-size: 14px;
+		color: #A0A0A0;
+	}
+
+	&::before {
+		left: 0px;
+	}
+}
+
+input[type="password"] {
+	padding-right: 35px;
+	background-image: url("../../img/pass.svg");
+}
+
+input[type="email"]:valid,
+input[type="password"]:valid {
+	border-color: $input-valid-color;
+}

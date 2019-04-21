@@ -1,0 +1,33 @@
+doctype html
+html
+	head
+		link(rel="stylesheet", href="css/min/style.css")
+		meta(name="viewport", content="width=device-width", initial-scale=1)
+	body
+		div(class="wrapper")
+			button(class="open-popup", type="button") Open login form
+			form(action="" method="" class="form")
+				h3(class="title-block") Log in
+				div(class="wrapper-input")
+					input(
+						type="email",
+						placeholder="Email",
+						class="input-area",
+						autofocus,
+						required
+					)
+				div(class="wrapper-input")
+					input(
+						type="password",
+						placeholder="Password",
+						class="input-area",
+						required
+						)
+				button(class="btn" type="send") Authorize me
+				p(class="form__links-block")
+					a(href="#" class="link") Go to registration form
+					a(href="#" class="link") Forgot password?
+				button(class="btn-close" type="button")
+		div(class="overlay")
+
+		script(src="js/popup.js")
